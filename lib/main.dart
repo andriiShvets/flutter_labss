@@ -1,26 +1,24 @@
 import 'package:flutter/material.dart';
-import './loginScreen.dart';
+import 'package:andrii_shvets/views/home.dart';
 
-void main() => runApp(LoginUI());
+void main() {
+  runApp(MyApp());
+}
 
-class LoginUI extends StatelessWidget {
-  const LoginUI({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Food recipe',
       debugShowCheckedModeBanner: false,
-      title: "Flutter Login UI",
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text("Login screen"),
+        primarySwatch: Colors.blue,
+        primaryColor: Colors.white,
+        textTheme: TextTheme(
+          bodyText2: TextStyle(color: Colors.white),
         ),
-        body: LoginScreen(),
       ),
+      home: HomePage(),
     );
   }
 }
